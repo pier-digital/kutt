@@ -56,6 +56,10 @@ app.prepare().then(async () => {
   server.use("/api/v2", routes);
   server.use("/api", __v1Routes);
 
+  if (process.env.ROOT_REDIRECT) {
+    server.get('/', (req, res) => res.redirect(301, process.env.ROOT_REDIRECT));
+  }
+
   server.get(
     "/reset-password/:resetPasswordToken?",
     asyncHandler(auth.resetPassword),
