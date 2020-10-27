@@ -84,7 +84,7 @@ app.prepare().then(async () => {
   }
 
   // Handler everything else by Next.js
-  server.get("/admin/*", (req, res) => handle(req, res));
+  server.get("*", (req, res) => handle(req, res));
 
   server.listen(port, err => {
     if (err) throw err;
