@@ -43,7 +43,7 @@ const SettingsDeleteAccount: FC = () => {
         { password: formState.values.accpass },
         getAxiosConfig()
       );
-      Router.push("/logout");
+      Router.push("/admin/logout");
     } catch (error) {
       setMessage(error.response.data.error);
     }

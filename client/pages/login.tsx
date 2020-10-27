@@ -43,7 +43,7 @@ const LoginPage = () => {
   }>(null, { withIds: true });
 
   useEffect(() => {
-    if (isAuthenticated) Router.push("/");
+    if (isAuthenticated) Router.push("/admin/");
   }, [isAuthenticated]);
 
   function onSubmit(type: "login" | "signup") {
@@ -71,7 +71,7 @@ const LoginPage = () => {
         setLoading(s => ({ ...s, login: true }));
         try {
           await login(formState.values);
-          Router.push("/");
+          Router.push("/admin/");
         } catch (error) {
           setError(error.response.data.error);
         }
