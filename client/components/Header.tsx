@@ -103,11 +103,11 @@ const Header: FC = () => {
       >
         <LogoImage>
           <a
-            href="/admin"
+            href="/"
             title="Homepage"
             onClick={e => {
               e.preventDefault();
-              if (window.location.pathname !== "/admin") Router.push("/admin");
+              if (window.location.pathname !== "/") Router.push("/");
             }}
           >
             <img src="/images/logo.svg" alt="" />

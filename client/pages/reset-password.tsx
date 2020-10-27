@@ -33,14 +33,14 @@ const ResetPassword: NextPage<Props> = ({ token }) => {
 
   useEffect(() => {
     if (auth.isAuthenticated) {
-      Router.push("/admin/settings");
+      Router.push("/settings");
     }
 
     if (token) {
       cookie.set("token", token, { expires: 7 });
       const decoded: TokenPayload = decode(token);
       addAuth(decoded);
-      Router.push("/admin/settings");
+      Router.push("/settings");
     }
   }, []);
 

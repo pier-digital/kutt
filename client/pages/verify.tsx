@@ -53,8 +53,8 @@ const Verify: NextPage<Props> = ({ token }) => {
             <Icon name="check" size={32} mr={3} stroke={Colors.CheckIcon} />
             <Message>Your account has been verified successfully!</Message>
           </MessageWrapper>
-          <Link href="/admin">
-            <ALink href="/admin" forButton>
+          <Link href="/">
+            <ALink href="/" forButton>
               <Button>
                 <Icon name="arrowLeft" stroke="white" mr={2} />
                 Back to homepage

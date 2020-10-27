@@ -19,7 +19,7 @@ const Homepage = () => {
     DISALLOW_ANONYMOUS_LINKS &&
     typeof window !== "undefined"
   ) {
-    Router.push("/admin/login");
+    Router.push("/login");
     return null;
   }
 

@@ -10,7 +10,7 @@ const LogoutPage: FC = () => {
   useEffect(() => {
     logout();
     reset();
-    Router.push("/admin/");
+    Router.push("/");
   }, []);
 
   return <div />;

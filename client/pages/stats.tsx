@@ -187,8 +187,8 @@ const StatsPage: NextPage<Props> = ({ id }) => {
               </Col>
             </Col>
             <Box alignSelf="center" my={64}>
-              <Link href="/admin">
-                <ALink href="/admin" title="Back to homepage" forButton>
+              <Link href="/">
+                <ALink href="/" title="Back to homepage" forButton>
                   <Button>
                     <Icon name="arrowLeft" stroke="white" mr={2} />
                     Back to homepage
