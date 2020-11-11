@@ -83,8 +83,6 @@ app.prepare().then(async () => {
     server.get('/', (req, res) => res.redirect(301, process.env.ROOT_REDIRECT));
   }
 
-  server.get("/admin", (req, res) => app.render(req, res, "/login"));
-
   // Handler everything else by Next.js
   server.get("*", (req, res) => handle(req, res));
 

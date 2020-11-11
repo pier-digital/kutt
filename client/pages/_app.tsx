@@ -64,6 +64,10 @@ class MyApp extends App<any> {
       logPageView();
     }
 
+    if (Router.pathname === '/admin') {
+      Router.replace('/login')
+    }
+
     Router.events.on("routeChangeStart", () => loading.show());
     Router.events.on("routeChangeComplete", () => {
       loading.hide();
